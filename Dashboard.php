@@ -13,13 +13,11 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
   <style>
-    /* Make sidebar fixed and full-height */
     #wrapper {
       display: flex;
       height: 100vh;
     }
 
-    /* Sidebar styles */
     #sidebar {
       width: 250px;
       background-color: #343a40;
@@ -43,14 +41,12 @@
       color: #007bff;
     }
 
-    /* Content area styles */
     #page-content-wrapper {
       margin-left: 250px;
       padding: 40px;
       flex-grow: 1;
     }
 
-    /* Motivational message styles */
     .motivational-card {
       background: #f8f9fa;
       border-radius: 15px;
@@ -80,7 +76,6 @@
       padding: 0;
     }
 
-    /* Adjustments for smaller screens */
     @media (max-width: 768px) {
       #wrapper {
         flex-direction: column;
@@ -98,7 +93,6 @@
 </head>
 <body>
 
-  <!-- Sidebar -->
   <div id="sidebar">
     <h3 class="text-center mb-4">Dashboard</h3>
     <ul class="nav flex-column">
@@ -125,14 +119,12 @@
     </ul>
   </div>
 
-  <!-- Page Content -->
   <div id="page-content-wrapper">
     <div class="d-flex justify-content-between align-items-center mb-4">
       <h1 class="text-dark">Welcome back, <?php echo $_SESSION['username']; ?>!</h1>
       <div id="date-time" class="text-muted"></div>
     </div>
 
-    <!-- Motivational Message -->
     <div class="motivational-card">
       <h1 id="motivational-message">"The best time to plant a tree was 20 years ago. The second best time is now."</h1>
       <p id="author">- Chinese Proverb</p>
@@ -142,7 +134,6 @@
   <!-- Bootstrap Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Date and Time Script -->
   <script>
     function updateDateTime() {
       const options = { 
@@ -162,7 +153,6 @@
     updateDateTime();
     setInterval(updateDateTime, 1000);
 
-    // Motivational Messages Array
     const motivationalMessages = [
       { quote: "The best time to plant a tree was 20 years ago. The second best time is now.", author: "- Chinese Proverb" },
       { quote: "Success is not final, failure is not fatal: It is the courage to continue that counts.", author: "- Winston Churchill" },
@@ -171,7 +161,6 @@
       { quote: "The only way to do great work is to love what you do.", author: "- Steve Jobs" }
     ];
 
-    // Randomly display a motivational message
     function displayMotivationalMessage() {
       const randomIndex = Math.floor(Math.random() * motivationalMessages.length);
       const message = motivationalMessages[randomIndex];
