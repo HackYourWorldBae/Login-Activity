@@ -121,7 +121,7 @@
 
   <div id="page-content-wrapper">
     <div class="d-flex justify-content-between align-items-center mb-4">
-      <h1 class="text-dark">Welcome back, <?php echo $_SESSION['username']; ?>!</h1>
+      <h1 class="text-dark">Welcome, <?php echo $_SESSION['username']; ?>!</h1>
       <div id="date-time" class="text-muted"></div>
     </div>
 
